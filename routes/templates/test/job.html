@@ -33,13 +33,7 @@
             <div>
             <!--Flask Templating Syntax: Dynamic data-->
                 {% for job in jobs %}
-                    <div style="margin-bottom:16px;">
-                        <h4 style="color:rgb(120,120,120); margin-bottom:4px;">{{job['title']}}</h4>
-                        <div><b>Location:</b>{{job['location']}}</div>
-                        {% if 'Salary' in job %}
-                        <div><b>Salary:</b>{{job['Salary']}}</div>
-                        {% endif %}
-                    </div>
+                    {% include 'test/jobitem.html' %}
                 {% endfor %}
             </div>
             <div class="text-center">
