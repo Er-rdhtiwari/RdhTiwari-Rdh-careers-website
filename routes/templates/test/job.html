@@ -10,25 +10,36 @@
         <style>
             #banner {
                 width: 100%;
-                height: 360px;
+                height: 420px;
                 object-fit: cover;
+                margin-bottom: 16px;
+                 padding-bottom: 5px;
             }
         </style>
 
     </head>
     <body>
+        {% include 'test/nav.html' %}
+        <img class ="img-fluid" id="banner" src="https://webhostingimage.s3.ap-south-1.amazonaws.com/jpg/career.jpg">
         <div class="container">
             <h1  class="text-center mt-2 mb-4" >Pichain Innovation Labs </h1>
             <!--Bootstrap Java Script-->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-            <img class ="img-fluid" id="banner" src="https://webhostingimage.s3.ap-south-1.amazonaws.com/jpg/career.jpg">
+
             <h2  class="text-center mt-2 mb-4">About {{company_name}} </h2>
+            <div class="row" style="margin-bottom:16px">
+                <div class="col-md-6">
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                 commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
                 anim id est laborum.
             </p>
+                    </div>
+                <div class="d-none d-md-block col-6">
+                <img src="https://webhostingimage.s3.ap-south-1.amazonaws.com/jpg/working.jpg" style="height:320px; border-radius:4px">
+                    </div>
+            </div>
             <h2  class="text-center mt-2 mb-4" >Open Positions </h2>
             <div>
             <!--Flask Templating Syntax: Dynamic data-->
@@ -37,11 +48,11 @@
                 {% endfor %}
             </div>
             <div class="text-center">
-                <button class="btn btn-primary btn-lg">Contact Us</button>
+                <a class="btn btn-primary btn-lg" href="mailto:tiwari.rdhtiwari@gmail.com?subject=Question%20for%20job%20Openings&body=My%20Name%3A%20%3CYour%20Name%3E%0D%0AMy%20Question%3A%20%3CQuestion%20here%3F%3E%0D%0A ">Contact Us</a>
             </div>
-            <p class="mt-2 mb-4">Copyright 2023 Pichain Innovation Labs</p>
 
         </div>
+        {% include 'test/footer.html' %}
     </body>
 
 </html>
